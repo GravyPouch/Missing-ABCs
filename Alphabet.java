@@ -11,6 +11,8 @@ public class Alphabet {
 	String other = new String ("abcdefghijklmnopqrstuvwxyz");
 	
 	void whatsMissing(){
+		//Defines a new Stringbuilder
+		StringBuilder glue = new StringBuilder();
 		System.out.println("Give me a word");
         Scanner console = new Scanner(System.in);
 		//prombts user for text
@@ -34,10 +36,14 @@ public class Alphabet {
 			//If it does. It does a whole lot of nothing
 		}
 		else{
-			//If it doesn't it prints the letter
-			System.out.print(letter);
+			//Appends the letter
+			glue.append(letter);
 		}
 	}
+		//Defines a new string from the charectars
+		String fulltext = glue.toString();
+		//Prints the new String
+		System.out.println(fulltext);
 	}
 //this just runs the script
 	public static void main(String[] args) {
